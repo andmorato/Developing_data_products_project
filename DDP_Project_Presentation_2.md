@@ -1,0 +1,72 @@
+Developing Data Products - Project
+========================================================
+author: Andre Morato 
+date: April 18, 2017
+autosize: true
+
+Introduction
+========================================================
+
+This presentation explains the app created to respond the following question: 
+
+1. Is an automatic or manual transmission better for MPG?
+
+The data used is the data set mtcars, provided in *datasets* package.
+
+
+Link for GitHub repository containing all codes:
+
+https://github.com/andmorato/Developing_data_products_project
+
+
+The data
+========================================================
+
+The "mtcars" data set was extracted from the 1974 Motor Trend US magazine. It comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles (1973-74 models).
+
+The data is formated in a data frame with 32 observations on 11 variables, as follows:
+
+[, 1] - **mpg** - Miles/(US) gallon;
+*[, 2] - **cyl** - Number of cylinders;*
+[, 3] - **disp** - Displacement (cu.in.);
+*[, 4] - **hp** - Gross horsepower;*
+[, 5] - **drat** - Rear axle ratio;
+*[, 6] - **wt** - Weight (1000 lbs);*
+[, 7] - **qsec** - 1/4 mile time;
+*[, 8] - **vs** - V/S;*
+[, 9] - **am** - Transmission (0 = automatic, 1 = manual);
+*[,10] - **gear** - Number of forward gears;*
+[,11] - **carb** - Number of carburetors
+
+
+The App
+========================================================
+
+The interactive app fit a linear model with predictors set by the user. The milleage per gallon is the response predicted by the other variables selected, the predictors.
+
+If no predictor is selected, the fitted model will have only the transmission as predictor. 
+
+Below, the fitted milleage per gallon with only one predictor, the transmission (reduce zoom to plot appear in screen):
+
+
+```r
+data("mtcars"); fit<-lm(mpg ~ am, data=mtcars)
+with(mtcars, plot(am, mpg,xlab="Transmission[0 = automatic - 1 = manual]", ylab="Milleage per gallon"))
+abline(fit, col = "red")
+```
+
+<img src="DDP_Project_Presentation_2-figure/unnamed-chunk-1-1.png" title="plot of chunk unnamed-chunk-1" alt="plot of chunk unnamed-chunk-1" style="display: block; margin: auto;" />
+
+
+The answers
+========================================================
+
+The app evaluate the following:
+
+1. The expected influence of transmission in fuel consumption. How much bigger is the milleage per gallon of manual cars comparing to automatic cars.
+
+2. The 95% confidence interval of value given above.
+
+3. The result of a hipothesis test that evaluate the influence of transmission in fuel consumption.
+
+4. A plot of residuals of predicted milleage per gallon.

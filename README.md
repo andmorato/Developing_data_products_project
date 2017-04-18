@@ -1,2 +1,27 @@
-# Developing_data_products_project
-Final project of Developing Data Products course
+#Developing_data_products_project
+h3("DevelopingDataProductsFinalProject"),
+h5("Thisisashinyapplicationthatevaluatesthetransmission(automaticormanual)influenceinmilleagepergallonofcarsinMTCARSdataset."),
+helpText(a("ClickHeretoaccessGitHubrepository",href="https://github.com/andmorato/Developing_data_products_project")),
+h4("Overview"),
+h5("Themtcarsdatasetwasextractedfromthe1974MotorTrendUSmagazine.Itcomprisesfuelconsumptionand10aspectsofautomobiledesignandperformancefor32automobiles(1973-74models)."),
+h5("Thedataisformatedinadataframewith32observationson11variables,asfollows:"),
+h6("[,1]-mpg-Miles/(US)gallon;"),
+h6("[,2]-cyl-Numberofcylinders;"),
+h6("[,3]-disp-Displacement(cu.in.);"),
+h6("[,4]-hp-Grosshorsepower;"),
+h6("[,5]-drat-Rearaxleratio;"),
+h6("[,6]-wt-Weight(1000lbs);"),
+h6("[,7]-qsec-1/4miletime;"),
+h6("[,8]-vs-V/S;"),
+h6("[,9]-am-Transmission(0=automatic,1=manual);"),
+h6("[,10]-gear-Numberofforwardgears;"),
+h6("[,11]-carb-Numberofcarburetors;"),
+
+h4("Usingtheapplication:"),
+h5("Selectthepredictorsinsidepanelcheckboxes.Themilleagepergallonwillbefittedinfunctionofselectedpredictors.Theformulacanbecheckedinfirstresponsebox."),
+h5("Theinitialconfigurationisnoselectedpredictors.Inthiscondition,onlytransmissionwillbesetaspredictorofmilleagepergallon."),
+h4("Analysis:"),
+h5("First,itwillbeevaluatedthetransmissioninfluence,thatisthedifferenceinmilleagepergallonbetweenautomaticcarsandmanualcars.Thisinfluencechangesasyouselectdifferentsetofpredictors."),
+h5("Second,itwillbeevaluatedthe95%confidenceintervaloftransmissioninfluence.Itmeansthatfor95%ofcarsinthisdatasetthisintervalrepresentsthetransmissioninfluence."),
+h5("Finally,itwillbepresentedtheconclusioniftransmissionhasinfluenceinmilleagepergallonforthesetofpredictorsselected.ThisconclusionisobtainedbyhypothesistestexplainedinStatisticalInferenceclass."),
+h5("Theanalysisisfinishedwithaplotofresiduals,thatisthedifferencebetweentheactualvalueincomparisiontotheoneobtainedwiththefittedmodel.Thisplotcangivearoughideaiftheselectedpredictorsisgoodforpredictmilleagepergallon.Theresidualswillbereducedasthebetteristhechooseofpredictors.")
